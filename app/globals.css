@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #f5fafb;
+}
+
+h1,
+h2,
+h3 {
+  color: #2e3057;
+}
+
+p {
+  color: #2e3057;
+}
+
+span {
+  color: #2e3057;
+}
