@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import "animate.css";
@@ -7,13 +8,22 @@ import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import LoadingEvolutions from "./LoadingEvolutions";
 import Image from "next/image";
-import { ArrowBigRight, ChevronsRight } from "lucide-react";
+import { ArrowBigRight } from "lucide-react";
 
 export default function Evolutions({ id }: AboutProps) {
   const [pokemon, setPokemon] = useState<any | null>(null);
   const [fetching, setFetching] = useState(true);
 
-  let poke: any = {
+  type PokeProp = {
+    evolutionChain: InfoPoke[];
+  };
+
+  type InfoPoke = {
+    name: string;
+    image: string;
+  };
+
+  let poke: PokeProp = {
     evolutionChain: [
       {
         name: "",
@@ -118,7 +128,10 @@ export default function Evolutions({ id }: AboutProps) {
       {!fetching ? (
         <>
           {pokemon.evolutionChain[1].name === "" ? (
-            <p>Não tem evolução</p>
+            // eslint-disable-next-line react/no-unescaped-entities
+            <p className="font-semibold text-[#2E3057] text-lg text-center">
+              This pokemon doesn't have an evolution
+            </p>
           ) : (
             <>
               <div className="flex justify-center gap-9 items-center mt-2">

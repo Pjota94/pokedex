@@ -17,7 +17,7 @@ export default function Search() {
       <input
         className="w-[215px] pl-[14px] mr-[5px] h-[38px] bg-[#EBF3F5] border border-[#2E305769] rounded-lg focus:outline-none text-sm text-[#2E3057]"
         type="text"
-        placeholder="name or number"
+        placeholder="pokemon name"
         value={name}
         onChange={(e) => {
           const lowerCase = e.target.value.toLowerCase();

@@ -31,7 +31,7 @@ export default async function Pokemon({
 
   return (
     <>
-      <Link href={"/listPokemons"} className="w-full text-[#2E3057]">
+      <Link href={"/"} className="w-full text-[#2E3057]">
         <ArrowLeft
           size={50}
           className="mt-10 ml-16 hover:text-[#2E3057E0] max-[810px]:mt-[1.2rem] max-[810px]:ml-[6px]"
