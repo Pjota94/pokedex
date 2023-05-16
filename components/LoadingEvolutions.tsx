@@ -1,14 +1,14 @@
 import Image from "next/image";
-import pokeball from "../../assets/pokeball.png";
+import pokeball from "../assets/pokeball.png";
 
-export default function Loading() {
+export default function LoadingEvolutions() {
   return (
-    <div className="w-full h-screen flex  flex-col justify-center items-center">
+    <div className="mt-[70px] flex  flex-col justify-center items-center">
       <Image
         className="animate-spin"
         src={pokeball}
-        width={150}
-        height={150}
+        width={100}
+        height={100}
         alt="pokeball"
         priority
       />

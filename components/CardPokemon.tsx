@@ -1,3 +1,4 @@
+import { cores } from "@/assets/colors";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,9 +24,11 @@ export default (async function CardPokemon({ name, url }: Pokemon) {
   return (
     <Link
       href={`${name}`}
-      className={` cursor-pointer flex justify-center flex-col items-center w-[110px] h-[146px] bg-${dataPokemon.types[0].type.name} rounded-[8px]  hover:bg-${dataPokemon.types[0].type.name}-hover transition duration-300 ease-in-out`}
+      className={`cursor-pointer flex justify-center flex-col items-center w-[110px] h-[146px] rounded-[8px] group overflow-hidden `}
+      style={{ backgroundColor: `${cores[dataPokemon.types[0].type.name]}` }}
     >
       <Image
+        className="group-hover:scale-110 transition duration-300 ease-in-out"
         priority
         width={77}
         height={68}
@@ -34,13 +37,13 @@ export default (async function CardPokemon({ name, url }: Pokemon) {
       />
       <h1 className="capitalize text-[12px] font-semibold mb-[4px]">{name}</h1>
       {dataPokemon.id < 10 && (
-        <p className="font-light text-[9px]">00{dataPokemon.id}</p>
+        <p className="font-light text-[11px]">00{dataPokemon.id}</p>
       )}
       {dataPokemon.id > 10 && dataPokemon.id < 100 && (
-        <p className="font-light text-[9px]">0{dataPokemon.id}</p>
+        <p className="font-light text-[11px]">0{dataPokemon.id}</p>
       )}
       {dataPokemon.id > 10 && dataPokemon.id > 100 && (
-        <p className="font-light text-[9px]">{dataPokemon.id}</p>
+        <p className="font-light text-[11px]">{dataPokemon.id}</p>
       )}
     </Link>
   );

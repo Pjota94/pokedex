@@ -7,8 +7,8 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Primeiro Contato",
-  description: "Primeiro app Next 13",
+  title: "Pokédex",
+  description: "Pokédex app with Next 13",
 };
 
 export default function RootLayout({

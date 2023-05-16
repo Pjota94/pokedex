@@ -3,7 +3,7 @@ import pokeball from "../../assets/pokeball.png";
 
 export default function Loading() {
   return (
-    <div className="w-full h-screen flex  flex-col justify-center items-center">
+    <div className="w-full flex  flex-col justify-center items-center">
       <Image
         className="animate-spin"
         src={pokeball}

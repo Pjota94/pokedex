@@ -1,5 +1,5 @@
 import Image from "next/image";
-import pokeball from "../../assets/pokeball.png";
+import pokeball from "../assets/pokeball.png";
 
 export default function Loading() {
   return (
