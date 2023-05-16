@@ -12,7 +12,7 @@ export default function LoadingEvolutions() {
         alt="pokeball"
         priority
       />
-      <p className="font-semibold text-lg">Loading...</p>
+      <p className="font-semibold text-lg text-[#2E3057]">Loading...</p>
     </div>
   );
 }
